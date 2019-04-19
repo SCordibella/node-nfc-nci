@@ -15,10 +15,10 @@ target_include_directories(${PROJECT_NAME} PRIVATE "/usr/include/node")
 # Include N-API wrappers
 if (EXISTS "${CMAKE_SOURCE_DIR}/node_modules/")
   target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_SOURCE_DIR}/node_modules/node-addon-api")
-  #target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_SOURCE_DIR}/node_modules/node-addon-api/src")
+  target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_SOURCE_DIR}/node_modules/node-addon-api/src")
 else()
   target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_SOURCE_DIR}/../node-addon-api")
-  #target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_SOURCE_DIR}/../node-addon-api/src")
+  target_include_directories(${PROJECT_NAME} PRIVATE "${CMAKE_SOURCE_DIR}/../node-addon-api/src")
 endif()
 
 # Essential include files to build a node addon,
